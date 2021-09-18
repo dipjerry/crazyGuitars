@@ -33,7 +33,7 @@ body {
     position: absolute;
     width: 30vw;
     right: 15%;
-    top: 3%;
+    /* top: 1%; */
     filter: drop-shadow(10px 8px 10px black);
 }
 

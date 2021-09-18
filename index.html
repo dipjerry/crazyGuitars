@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/horta" type="text/css" />
     <link rel="stylesheet" media="screen" href="./style/style.css" type="text/css" />
     <link rel="stylesheet" media="screen" href="./style/landing.css" type="text/css" />
     <link rel="stylesheet" media="screen" href="./style/smoke.css" type="text/css" />
+    <link rel="stylesheet" media="screen" href="./style/cardStyle.css" type="text/css" />
     <title>Crazy Guitars</title>
 </head>
 
@@ -95,34 +97,76 @@
                 amet amet elitr, sanctus lorem sadipscing ipsum dolores rebum at, dolore ipsum dolor et no labore, sed vero at kasd erat et amet et, sadipscing lorem stet consetetur sanctus sit magna takimata stet duo, et consetetur sit sit et eos ea
                 nonumy sadipscing. Sea dolores amet ipsum clita et stet nonumy rebum. Consetetur sanctus diam gubergren rebum diam, dolor diam tempor invidunt stet ipsum. At amet lorem et amet lorem voluptua, sed justo sea invidunt sit nonumy. No dolor
                 et sit ea est, eos et at tempor justo voluptua aliquyam dolor sadipscing, diam ipsum lorem dolor dolor kasd. Gubergren consetetur clita kasd dolore sed magna est. Rebum tempor dolore takimata vero ut accusam sit, consetetur lorem ea duo.</p>
-            <div class="w3-row w3-padding-32">
+
+
+
+            <div class="w3-container w3-content">
                 <h2 class="w3-wide w3-center">TEAM MEMBERS</h2>
-                <div class="w3-third">
-                    <p>Name</p>
-                    <img src="https://loremflickr.com/320/240/" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-                </div>
-                <div class="w3-third">
-                    <p>Name</p>
-                    <img src="https://loremflickr.com/320/240/" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-                </div>
-                <div class="w3-third">
-                    <p>Name</p>
-                    <img src="https://loremflickr.com/320/240/" class="w3-round" alt="Random Name" style="width:60%">
+                <p class="w3-opacity w3-center"><i>Our new release!</i></p><br>
+                <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+                    <div class="w3-third w3-padding">
+                        <div class="our-member w3-card" role="button" id="view_details">
+                            <!-- <button class="button" id="view_details" data-eid="<?php echo ($row["id"]) ?>"> -->
+                            <div class="picture">
+                                <img src="https://loremflickr.com/400/400/" class="img-fluid" alt="Random Name">
+                            </div>
+                            <!-- </button> -->
+                            <div class=" member-content">
+                                <h3 class="name">
+                                    Name
+                                </h3>
+                                <h3 class="name">
+                                    Designation
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-third  w3-padding">
+                        <div class="our-member w3-card" role="button" id="view_details">
+                            <!-- <button class="button" id="view_details" data-eid="<?php echo ($row["id"]) ?>"> -->
+                            <div class="picture">
+                                <img src="https://loremflickr.com/400/400/" class="img-fluid" alt="Random Name">
+                            </div>
+                            <!-- </button> -->
+                            <div class=" member-content">
+                                <h3 class="name">
+                                    Name
+                                </h3>
+                                <h3 class="name">
+                                    Designation
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-third  w3-padding">
+                        <div class="our-member w3-card" role="button" id="view_details">
+                            <!-- <button class="button" id="view_details" data-eid="<?php echo ($row["id"]) ?>"> -->
+                            <div class="picture">
+                                <img src="https://loremflickr.com/400/400/" class="img-fluid" alt="Random Name">
+                            </div>
+                            <!-- </button> -->
+                            <div class=" member-content">
+                                <h3 class="name">
+                                    Name
+                                </h3>
+                                <h3 class="name">
+                                    Designation
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
         </div>
         <!-- The Tour Section -->
         <div class="w3-black" id="tour">
-            <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+            <div class="w3-container w3-content w3-padding-40" style="max-width:800px">
                 <h2 class="w3-wide w3-center">LATEST ALBUM</h2>
                 <p class="w3-opacity w3-center"><i>Our new release!</i></p><br>
-                <!-- <ul class="w3-ul w3-border w3-white w3-text-grey">
-                    <li class="w3-padding">September <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
-                    <li class="w3-padding">October <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
-                    <li class="w3-padding">November <span class="w3-badge w3-right w3-margin-right">3</span></li>
-                </ul> -->
                 <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-                    <div class="w3-third w3-margin-bottom">
+                    <div class="w3-third w3-card w3-margin-bottom">
                         <img src="https://loremflickr.com/320/240/" alt="New York" style="width:100%" class="w3-hover-opacity">
                         <div class="w3-container w3-white">
                             <p><b>Name</b></p>
@@ -131,7 +175,7 @@
                             <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View More</button>
                         </div>
                     </div>
-                    <div class="w3-third w3-margin-bottom">
+                    <div class="w3-third w3-card w3-margin-bottom">
                         <img src="https://loremflickr.com/320/240/" alt="New York" style="width:100%" class="w3-hover-opacity">
                         <div class="w3-container w3-white">
                             <p><b>Name</b></p>
@@ -140,7 +184,7 @@
                             <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View More</button>
                         </div>
                     </div>
-                    <div class="w3-third w3-margin-bottom">
+                    <div class="w3-third w3-card w3-margin-bottom">
                         <img src="https://loremflickr.com/320/240/" alt="New York" style="width:100%" class="w3-hover-opacity">
                         <div class="w3-container w3-white">
                             <p><b>Name</b></p>
