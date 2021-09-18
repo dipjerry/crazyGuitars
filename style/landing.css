@@ -99,7 +99,7 @@ body {
 }
 
 @font-face {
-    font-family: 'WC Mano Negra Bta Bold';
+    font-family: 'wc_mano_negra_btabold';
     font-style: normal;
     font-weight: normal;
     src: local('WC Mano Negra Bta Bold'), url('./WCManoNegraBoldBta.woff') format('woff');
@@ -112,13 +112,14 @@ body {
     src: local('Kalpana UNICODE'), url('KalpanaANSI.ttf') format('ttf');
 }
 
-@font-face {
+
+/* @font-face {
     font-family: 'wc_mano_negra_btabold';
     src: url('WCManoNegraBoldBta-webfont.eot');
     src: url('WCManoNegraBoldBta-webfont.eot?#iefix') format('embedded-opentype'), url('WCManoNegraBoldBta-webfont.woff2') format('woff2'), url('WCManoNegraBoldBta-webfont.woff') format('woff'), url('WCManoNegraBoldBta-webfont.ttf') format('truetype'), url('WCManoNegraBoldBta-webfont.svg#wc_mano_negra_btabold') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 .navBar {
     position: relative;
