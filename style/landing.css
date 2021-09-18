@@ -130,9 +130,9 @@ body {
     }
     .coverArt2 {
         width: 30vh;
-        transform: translatex(30%);
+        transform: translatex(40%);
         /* transform: translatey(1%); */
-        top: 15%;
+        top: 10%;
     }
     .coverArt1 {
         height: 60vh;
