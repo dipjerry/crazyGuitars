@@ -102,7 +102,7 @@ body {
     font-family: 'WC Mano Negra Bta Bold';
     font-style: normal;
     font-weight: normal;
-    src: local('WC Mano Negra Bta Bold'), url('WCManoNegraBoldBta.tts') format('tts');
+    src: local('WC Mano Negra Bta Bold'), url('./WCManoNegraBoldBta.woff') format('woff');
 }
 
 @font-face {
