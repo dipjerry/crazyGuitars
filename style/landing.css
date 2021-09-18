@@ -139,9 +139,12 @@ body {
     .guitar_text {
         font-size: 15vw;
     }
+    .guitar_text_container {
+        transform: rotate(-10deg) translateY(-60px);
+    }
     .coverArt2 {
         width: 30vh;
-        transform: translatex(40%);
+        transform: translatex(60%);
     }
     .coverArt1 {
         height: 60vh;
