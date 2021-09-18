@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bubblegum+Sans" />
+    <style>
+        .target-for-span-letters {
+            font-family: Bubblegum Sans;
+            font-size: 70px!important;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 700;
+            line-height: 30.4px;
+            letter-spacing: 3px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        .target-for-span-letters span {
+            display: inline-block;
+            transition: 0.8s;
+        }
+        
+        #target-for-span-letters1 {
+            text-shadow: -1px 0 0px #ffadda, 0 1px 0px #f99acd, -2px 1px 0px #ffadda, -1px 2px 0px #f99acd, -3px 2px 0px #ffadda, -2px 3px 0px #f99acd, -4px 3px 0px #ffadda, -3px 4px 0px #f99acd, -5px 4px 0px #ffadda, -4px 5px 0px #f99acd, -6px 5px 0px #ffadda, -5px 6px 15px #000000;
+        }
+        
+        #target-for-span-letters1 .sl1 {
+            color: red;
+            transform: rotateX(20deg) rotateY(-20deg) rotateZ(10deg);
+        }
+        
+        #target-for-span-letters1 .sl2 {
+            color: orange;
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(-15deg);
+        }
+        
+        #target-for-span-letters1 .sl3 {
+            color: yellow;
+            transform: rotateX(0deg) rotateY(30deg) rotateZ(25deg);
+        }
+        
+        #target-for-span-letters1 .sl4 {
+            color: green;
+            transform: rotateX(0deg) rotateY(5deg) rotateZ(-5deg);
+        }
+        
+        #target-for-span-letters1 .sl5 {
+            color: blue;
+            transform: rotateX(20deg) rotateY(0deg) rotateZ(-35deg);
+        }
+        
+        #target-for-span-letters1 .sl6 {
+            color: indigo;
+            transform: rotateX(10deg) rotateY(0deg) rotateZ(5deg);
+        }
+        
+        #target-for-span-letters1 .sl7 {
+            color: violet;
+            transform: rotateX(0deg) rotateY(30deg) rotateZ(35deg);
+        }
+        
+        #target-for-span-letters1 .sl8 {
+            color: white;
+            transform: rotateX(-10deg) rotateY(0deg) rotateZ(-15deg);
+        }
+        
+        #target-for-span-letters1 .sl9 {
+            color: black;
+            transform: rotateX(-10deg) rotateY(0deg) rotateZ(15deg);
+        }
+        
+        #target-for-span-letters1:hover span {
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            cursor: pointer;
+        }
+        
+        @media screen and (max-width: 1100px) {
+            .target-for-span-letters {
+                font-size: 112px;
+            }
+        }
+        
+        @media screen and (max-width: 900px) {
+            .target-for-span-letters {
+                font-size: 94px;
+            }
+        }
+        
+        @media screen and (max-width: 749px) {
+            .target-for-span-letters {
+                font-size: 72px;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .target-for-span-letters {
+                font-size: 62px;
+            }
+        }
+        
+        @media screen and (max-width: 500px) {
+            .target-for-span-letters {
+                font-size: 56px;
+            }
+        }
+        
+        @media screen and (max-width: 450px) {
+            .target-for-span-letters {
+                font-size: 47px;
+            }
+        }
+        
+        @media screen and (max-width: 400px) {
+            .target-for-span-letters {
+                font-size: 43px;
+            }
+        }
+        
+        @media screen and (max-width: 360px) {
+            .target-for-span-letters {
+                font-size: 42px;
+            }
+        }
+        
+        @media screen and (max-width: 340px) {
+            .target-for-span-letters {
+                font-size: 38px;
+            }
+        }
+        
+        h1 {
+            animation: text-shadow 1.5s ease-in-out infinite;
+        }
+        
+        h1:hover {
+            animation-play-state: paused;
+        }
+        
+        a {
+            color: #024794;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        
+        @keyframes text-shadow {
+            0% {
+                transform: translateY(0);
+                text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+            }
+            20% {
+                transform: translateY(-1em);
+                text-shadow: 0 0.125em 0 #0c2ffb, 0 0.25em 0 #2cfcfd, 0 -0.125em 0 #fb203b, 0 -0.25em 0 #fefc4b;
+            }
+            40% {
+                transform: translateY(0.5em);
+                text-shadow: 0 -0.0625em 0 #0c2ffb, 0 -0.125em 0 #2cfcfd, 0 0.0625em 0 #fb203b, 0 0.125em 0 #fefc4b;
+            }
+            60% {
+                transform: translateY(-0.25em);
+                text-shadow: 0 0.03125em 0 #0c2ffb, 0 0.0625em 0 #2cfcfd, 0 -0.03125em 0 #fb203b, 0 -0.0625em 0 #fefc4b;
+            }
+            80% {
+                transform: translateY(0);
+                text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+            }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="" style="background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);">
+
+    <div class="container w3-center">
+        <div class=" w3-center w3-margin title_anim">
+            <h1 class="text-size-large ">
+                <p id="target-for-span-letters1" class="target-for-span-letters" style="padding:10%">
+                    <span class="sl1 span-letter">p</span>
+                    <span class="sl3 span-letter">u</span>
+                    <span class="sl7 span-letter">n</span>
+                    <span class="sl1 span-letter">o</span>
+                    <span class="sl3 span-letter">o</span>
+                    <span class="sl7 span-letter">m</span>
+                    <br>
+                    <br>
+                    <br>
+                    <span class="sl5 span-letter">g</span>
+                    <span class="sl4 span-letter">u</span>
+                    <span class="sl6 span-letter">u</span>
+                    <!-- <span class="sl2 span-letter">a</span> -->
+                    <br>
+                    <br>
+                    <br>
+                    <span class="sl1 span-letter">K</span>
+                    <span class="sl6 span-letter">h</span>
+                    <span class="sl3 span-letter">a</span>
+                    <span class="sl4 span-letter">i</span>
+
+                </p>
+            </h1>
+        </div>
+    </div>
+</body>
+
+</html>

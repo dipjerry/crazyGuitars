@@ -1,0 +1,26 @@
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteRule ^c-(.*)$ catpost.php?id=$1 [L]
+RewriteRule ^e-(.*)$ admin/edit-post.php?id=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d [NC]
+RewriteCond %{REQUEST_FILENAME} !-f [NC]
+RewriteRule ^(.*)$ viewpost.php?id=$1 [QSA,L]
+
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php73 .php .php7 .phtml
+</IfModule>
+AddType application/x-httpd-php .php
+#AddType application/x-httpd-php-source .phps
+
+RewriteRule .*\.()$ - [F,NC]
+
+RewriteRule .*\.()$ - [F,NC]
+
+AddType application/x-httpd-php .html

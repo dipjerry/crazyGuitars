@@ -1,0 +1,140 @@
+body {
+    font-family: "Lato", sans-serif;
+    overflow-x: hidden;
+}
+
+.mySlides {
+    display: none
+}
+
+.coverArtParent {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+
+/* .subClass2 {
+    z-index: -5;
+    display: none;
+} */
+
+.coverArt1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    filter: blur(4px);
+    margin: -1% -2% -1% -2%;
+    width: 120vw;
+    height: 100vh;
+}
+
+.coverArt2 {
+    position: absolute;
+    width: 30vw;
+    right: 15%;
+    top: 3%;
+    filter: drop-shadow(10px 8px 10px black);
+}
+
+.coverText {
+    position: absolute;
+    width: 40vw;
+    left: 25%;
+    top: 15%;
+    font-size: 2rem;
+    /* z-index: 1; */
+    font-family: 'HortaRegular';
+}
+
+.assamese_text {
+    font-family: 'kalpana';
+    font-weight: normal;
+    font-style: normal;
+    display: block;
+    font-size: 2rem;
+}
+
+.english_text {
+    font-weight: normal;
+    font-style: normal;
+    display: block;
+    font-size: 2rem;
+    transform: translateY(-80px);
+}
+
+.crazy_text {
+    font-family: 'HortaRegular';
+    font-weight: normal;
+    font-style: normal;
+    display: block;
+    font-size: 8rem;
+    filter: drop-shadow(10px 8px 10px black);
+}
+
+.guitar_text {
+    font-family: 'WC Mano Negra Bta Bold';
+    font-weight: normal;
+    font-size: 9rem;
+    color: rgb(235, 48, 48);
+    letter-spacing: 1px;
+    filter: drop-shadow(10px 8px 10px red);
+    -webkit-text-stroke: 1px black;
+}
+
+.guitar_text_container {
+    transform: rotate(-10deg) translateY(-80px);
+}
+
+.crazyGuitar_text {
+    white-space: nowrap;
+    display: line;
+}
+
+@font-face {
+    font-family: 'WC Mano Negra Bta';
+    font-style: normal;
+    font-weight: normal;
+    src: local('WC Mano Negra Bta'), url('WCManoNegraBta.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'WC Mano Negra Bta Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('WC Mano Negra Bta Bold'), url('WCManoNegraBoldBta.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'kalpana';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Kalpana UNICODE'), url('KalpanaANSI.ttf') format('ttf');
+}
+
+.navBar {
+    position: relative;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 800px) {
+    .assamese_text {
+        font-size: 3vw;
+    }
+    .english_text {
+        font-size: 4vw;
+    }
+    .crazy_text {
+        font-size: 15vw;
+    }
+    .guitar_text {
+        font-size: 15vw;
+    }
+    .coverArt2 {
+        width: 30vh;
+        transform: translatex(40%);
+    }
+    .coverArt1 {
+        height: 60vh;
+    }
+}
