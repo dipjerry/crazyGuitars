@@ -26,7 +26,7 @@ body {
     filter: blur(4px);
     margin: -1% -2% -1% -2%;
     width: 120vw;
-    height: 100vh;
+    height: 105vh;
 }
 
 .coverArt2 {
@@ -112,20 +112,6 @@ body {
     src: local('Kalpana UNICODE'), url('KalpanaANSI.ttf') format('ttf');
 }
 
-
-/* @font-face {
-    font-family: 'wc_mano_negra_btabold';
-    src: url('WCManoNegraBoldBta-webfont.eot');
-    src: url('WCManoNegraBoldBta-webfont.eot?#iefix') format('embedded-opentype'), url('WCManoNegraBoldBta-webfont.woff2') format('woff2'), url('WCManoNegraBoldBta-webfont.woff') format('woff'), url('WCManoNegraBoldBta-webfont.ttf') format('truetype'), url('WCManoNegraBoldBta-webfont.svg#wc_mano_negra_btabold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-} */
-
-.navBar {
-    position: relative;
-    z-index: 2;
-}
-
 @media only screen and (max-width: 800px) {
     .assamese_text {
         font-size: 3vw;
@@ -145,6 +131,8 @@ body {
     .coverArt2 {
         width: 30vh;
         transform: translatex(30%);
+        /* transform: translatey(1%); */
+        top: 15%;
     }
     .coverArt1 {
         height: 60vh;
