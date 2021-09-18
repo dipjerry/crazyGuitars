@@ -138,6 +138,7 @@ body {
     }
     .guitar_text {
         font-size: 15vw;
+        transform: translatey(-20%);
     }
     .coverArt2 {
         width: 30vh;
