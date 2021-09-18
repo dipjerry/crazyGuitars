@@ -144,7 +144,7 @@ body {
     }
     .coverArt2 {
         width: 30vh;
-        transform: translatex(60%);
+        transform: translatex(50%);
     }
     .coverArt1 {
         height: 60vh;
