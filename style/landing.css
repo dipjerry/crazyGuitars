@@ -33,7 +33,7 @@ body {
     position: absolute;
     width: 30vw;
     right: 15%;
-    /* top: 1%; */
+    top: 1%;
     filter: drop-shadow(10px 8px 10px black);
 }
 
@@ -112,6 +112,16 @@ body {
     src: local('Kalpana UNICODE'), url('KalpanaANSI.ttf') format('ttf');
 }
 
+.transparentNav {
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 200ms linear;
+}
+
+.descText {
+    font-size: 16px;
+}
+
 @media only screen and (max-width: 800px) {
     .assamese_text {
         font-size: 3vw;
@@ -135,6 +145,6 @@ body {
         top: 7%;
     }
     .coverArt1 {
-        height: 60vh;
+        height: 90vh;
     }
 }

@@ -32,15 +32,6 @@
 
 
 <script>
-    // function postReply(commentId) {
-    //     var closestDiv = $(this).closest('div');
-    //     $('.comment_reply').not(closestDiv.next('.comment_reply')).hide();
-    //     //$('.rep').closest('div').not(closestDiv).show()
-    //     closestDiv.next('form.comment_reply').slideToggle(100);
-    // });
-    // // $('#commentId').val(commentId);
-    // // $("#name").focus();
-    // }
     $(document).ready(function() {
         $(document).on('click', '.btn-reply', function() {
             var commentId = $(this).data("eid");
@@ -71,7 +62,7 @@
     $(document).on('click', '#submitButton', function() {
         // alert("groot");
         $("#comment-message").css('display', 'none');
-         tinyMCE.triggerSave();
+        tinyMCE.triggerSave();
         var str = $("#frm-comment").serialize();
 
         // alert(str);
@@ -99,7 +90,7 @@
     $(document).on('click', '#submitButton_comment', function() {
         // alert("groot");
         $("#comment-message-new").css('display', 'none');
-          tinyMCE.triggerSave();
+        tinyMCE.triggerSave();
         var str = $("#frm-comment-new").serialize();
 
         // alert(str);

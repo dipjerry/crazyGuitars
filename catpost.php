@@ -1,9 +1,9 @@
 <?php require('includes/config.php');
-$stmt = $db->prepare('SELECT catID,catTitle FROM blog_cats WHERE catSlug = :catSlug');
+$stmt = $db->prepare('SELECT catID,catTitle FROM crazyguitar_cats WHERE catSlug = :catSlug');
 $stmt->execute(array(':catSlug' => $_GET['id']));
 $row = $stmt->fetch();
 $cat_id = $row['catID'];
-$stmt0 = $db->prepare('SELECT id	FROM blog_post_cats WHERE catID = :catID');
+$stmt0 = $db->prepare('SELECT id	FROM crazyguitar_post_cats WHERE catID = :catID');
 $stmt0->execute(array(':catID' => $cat_id));
 $count = $stmt0->rowCount();
 if ($count == 0) {
@@ -16,7 +16,7 @@ if ($count == 0) {
 <html lang="en">
 
 <head>
-	<title>Blog - <?php echo $row['catTitle']; ?></title>
+	<title>crazyguitar - <?php echo $row['catTitle']; ?></title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style/urls.css">
 	<link rel="stylesheet" href="style/ui.css">
@@ -48,9 +48,9 @@ if ($count == 0) {
 		<br>
 		<!-- Grid -->
 		<header class="w3-container w3-center w3-padding-32">
-			<!-- <h1><b>MY BLOG</b></h1> -->
+			<!-- <h1><b>MY crazyguitar</b></h1> -->
 			<p>
-				<h3>Welcome to the blog of <span class="w3-tag">
+				<h3>Welcome to the crazyguitar of <span class="w3-tag">
 						<?php echo $row['catTitle'];
 						?></h3>
 				</span>
@@ -58,25 +58,25 @@ if ($count == 0) {
 		</header>
 
 		<div class="w3-row">
-			<!-- Blog entries -->
+			<!-- crazyguitar entries -->
 			<div class="w3-col l8 s12">
-				<!-- Blog entry -->
+				<!-- crazyguitar entry -->
 				<?php
 				try {
 					$pages = new Paginator('5', 'p');
-					$stmt = $db->prepare('SELECT blog_posts_seo.postID FROM blog_posts_seo, blog_post_cats WHERE blog_posts_seo.postID = blog_post_cats.postID AND blog_post_cats.catID = :catID');
+					$stmt = $db->prepare('SELECT crazyguitar_posts_seo.postID FROM crazyguitar_posts_seo, crazyguitar_post_cats WHERE crazyguitar_posts_seo.postID = crazyguitar_post_cats.postID AND crazyguitar_post_cats.catID = :catID');
 					$stmt->execute(array(':catID' => $row['catID']));
 					//pass number of records to
 					$pages->set_total($stmt->rowCount());
 					$stmt = $db->prepare('
 							SELECT 
-								blog_posts_seo.postID, blog_posts_seo.postTitle,blog_posts_seo.postThumb, blog_posts_seo.postSlug, blog_posts_seo.postDesc,blog_posts_seo.views, blog_posts_seo.postDate 
+								crazyguitar_posts_seo.postID, crazyguitar_posts_seo.postTitle,crazyguitar_posts_seo.postThumb, crazyguitar_posts_seo.postSlug, crazyguitar_posts_seo.postDesc,crazyguitar_posts_seo.views, crazyguitar_posts_seo.postDate 
 							FROM 
-								blog_posts_seo,
-								blog_post_cats
+								crazyguitar_posts_seo,
+								crazyguitar_post_cats
 							WHERE
-								 blog_posts_seo.postID = blog_post_cats.postID
-								 AND blog_post_cats.catID = :catID
+								 crazyguitar_posts_seo.postID = crazyguitar_post_cats.postID
+								 AND crazyguitar_post_cats.catID = :catID
 							ORDER BY 
 								postID DESC
 							' . $pages->get_limit());
@@ -91,7 +91,7 @@ if ($count == 0) {
 								<h3><b><?php echo '<h1><a href="' . $row['postSlug'] . '">' . $row['postTitle'] . '</a></h1>'; ?></b></h3>
 								<h5>Title description, <span class="w3-opacity">
 										<?php echo '<p>Posted on ' . date('jS M Y H:i:s', strtotime($row['postDate'])) . ' in ';
-										$stmt2 = $db->prepare('SELECT catTitle, catSlug	FROM blog_cats, blog_post_cats WHERE blog_cats.catID = blog_post_cats.catID AND blog_post_cats.postID = :postID');
+										$stmt2 = $db->prepare('SELECT catTitle, catSlug	FROM crazyguitar_cats, crazyguitar_post_cats WHERE crazyguitar_cats.catID = crazyguitar_post_cats.catID AND crazyguitar_post_cats.postID = :postID');
 										$stmt2->execute(array(':postID' => $row['postID']));
 										$catRow = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 										$links = array();

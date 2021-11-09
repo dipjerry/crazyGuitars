@@ -1,184 +1,194 @@
-
 <?php require('includes/config.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-<title>Coder Rat - Code Snippet & Practical Notes </title>
-<meta charset="UTF-8">
-<meta name="description" itemprop="description"  content="Free coding and technology related blog and tutorials. Practicals notes with Programs , Algorithm and output">
-<meta property="og:description" content="Free coding and technology related blog and tutorials. Practicals notes with Programs , Algorithm and output">
-<meta property="og:locale" content="en_US">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Coder Rat - Code Snippet & Practical Notes">
-<meta property="og:url" content="https://www.coderrat.xyz">
-<meta property="og:site_name" content="Coder Rat">
-<link rel="canonical" href="https://www.coderrat.xyz" />
-<meta name="keywords" content="HTML, CSS, JavaScript, jquery, hacking, code snippet, practical c programming, c programming notes, c++ notes,data structure, algorithm,
-ASTU CSE practical notes, php snippets, homework, copy, assignment, web-development, c++, c, python , free, snippet, blog, cyber security, free resource, quiz,  ajax, css, frontend, 
-backend, photoshop, bootstrap, w3css, college, polytechnic, presentation, engineering, practicals, question, answers, programming">
-<meta name="google-site-verification" content="iE_ZofhKWj0_KZiJBSoZ50w5s-tQonKQ-k5b4whK1Zs" />
-<meta name="facebook-domain-verification" content="scn7e2rpiqyy4b6h3yfdxcygzeteou" />
-<meta itemprop="inLanguage" content="English">
-<meta itemprop="publisher" content="Coder Rat">
-<meta name="image"  content="https://www.coderrat.xyz/images/coderrat.jpg">
-<meta  property="og:image" content="https://www.coderrat.xyz/images/coderrat.jpg">
-<meta property="og:image:alt" content="Coder rat">
-<meta name="author" content="CoderRat">
-<link rel="icon" href="./images/icon.ico" type="image/icon type">
-<link href="images/apple-touch-icon.png" rel="apple-touch-icon" />
-<link rel="stylesheet" href="style/animation.css" media="print" onload="this.media='all'; this.onload=null;">
-<link rel="stylesheet" href="style/urls.css">
-<link rel="stylesheet" href="style/ui.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script data-ad-client="ca-pub-5610815016922898" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-<style>
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  a,
-  a:active {
-    font-family: "Raleway", sans-serif
-  }
-</style>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTCEEYGM9F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/horta" type="text/css" />
 
-  gtag('config', 'G-YTCEEYGM9F');
-</script>
+    <link rel="stylesheet" media="screen" href="./style/landing.css" type="text/css" />
+    <link rel="stylesheet" media="screen" href="./style/gradients.css" type="text/css" />
+    <!-- <link rel="stylesheet" media="screen" href="./style/smoke.css" type="text/css" /> -->
+    <link rel="stylesheet" media="screen" href="./style/cardStyle.css" type="text/css" />
+    <title>Crazy Guitars</title>
 </head>
-<body itemscope itemtype="http://schema.org/Article" class="w3-light-grey">
-  <div  class="w3-content" style="max-width:1400px">
+
+<body class="mars_concuest" itemscope itemtype="http://schema.org/Article">
+    <!-- Navbar -->
     <?php require('nav.php'); ?>
-    <header class="w3-container w3-center w3-padding-32">
-      <h1 itemprop="headline"><b>Coder Rat</b></h1>
-      <p>Welcome to the blog of <span class="w3-tag">unknown</span></p>
-    </header>
-    <!-- Grid -->
-    <div class="w3-row">
-      <!-- Blog entries -->
-      <div class="w3-col l8 s12">
-        <!-- Blog entry -->
-        <?php
-        try {
+    <div class="w3-content" style="max-width:2000px">
 
-          $pages = new Paginator('5', 'p');
-
-          $stmt = $db->query('SELECT postID FROM blog_posts_seo');
-
-          //pass number of records to
-          $pages->set_total($stmt->rowCount());
-
-          $stmt = $db->query('SELECT postID, postTitle, postSlug, postThumb, postDesc,views, postDate FROM blog_posts_seo ORDER BY postID DESC ' . $pages->get_limit());
-          while ($row = $stmt->fetch()) {
-        ?>
-
-            <div itemscope itemtype="http://schema.org/Article" itemscope itemtype="http://schema.org/CreativeWork"  class="w3-card-4 w3-margin w3-white">
-              <?php if ($row['postThumb'] != '') { ?>
-                <img itemprop="image" src="<?php echo $row['postThumb'] ?>" alt="Nature" style="width:100%">
-              <?php } ?>
-              <div class="w3-container">
-                <b><a href="<?php $row['postSlug'] ?>"><h2 itemprop="name headline"><?php echo $row['postTitle'] ?></h2></a></b>
-                <h5><span class="w3-opacity">
-                    <?php 
-                    echo '<p>Posted on ' . date('jS M Y H:i:s', strtotime($row['postDate'])) . ' in ';
-                    echo '<meta itemprop="datePublished" content="'.date("Y-m-d",strtotime($row['postDate'])).'">'; 
-                    $stmt2 = $db->prepare('SELECT catTitle, catSlug	FROM blog_cats, blog_post_cats WHERE blog_cats.catID = blog_post_cats.catID AND blog_post_cats.postID = :postID');
-                    $stmt2->execute(array(':postID' => $row['postID']));
-
-                    $catRow = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-
-                    $links = array();
-                    foreach ($catRow as $cat) {
-                      $links[] = "<span class='w3-tag w3-light-black w3-small w3-margin-bottom' itemprop='url'><a href='c-" . $cat['catSlug'] . "'>" . $cat['catTitle'] . "</a></span>";
-                    }
-                    echo implode("<b> ,</b> ", $links);
-
-                    echo '</p>'; ?>
-                  </span>
-                </h5>
-              </div>
-              <?php
-              ?>
-              <div class="w3-container">
-                <?php echo '<p>' . $row['postDesc'] . '</p>'; ?>
-                <div class="w3-row">
-                  <div class="w3-col s7">
-                    <b>
-                      <p><button itemprop="url" onclick="location.href='<?php echo $row['postSlug'] ?>'" class="w3-button w3-padding-large w3-white w3-border">Read More</a></button></p>
-                    </b>
-                  </div>
-                  <div class="w3-col s5">
-                      <p>
-                    <span class="w3-padding-large w3-right" style="font-size: 16px; color:grey"><i class="fa fa-eye" aria-hidden="true"></i> <?php echo $row['views'] ?> <i class="fa fa-comments"></i>
-                        <?php
-                          $p_id = $row['postID'];
-                          $stmt3 = $db->prepare('SELECT comment_id	FROM tbl_comment WHERE post_id = :postID');
-                          $stmt3->execute(array(':postID' => $p_id));
-                          $comment_count = $stmt3->rowCount();
-
-                          echo $comment_count;
-                          ?>
-                        </span></span></p>
-                  </div>
+        <!-- Automatic Slideshow Images -->
+        <div class="w3-display-container w3-center coverArtParent">
+            <div class="subClass2">
+                <img src="./images/background.jpg" class="thumbnail coverArt1" style="width:100% ;">
+                <img src="./images/coverArt2 - Copy.png" class="coverArt2">
+                <div class="coverText  w3-text-white">
+                    <p class="assamese_text">কি আছিল কাহিনীটো… এখন ৰঙা গীটাৰত বজা </p>
+                    <div class="crazyGuitar_text">
+                        <div class="crazy_text_container">
+                            <span class="crazy_text">Crazy</span>
+                        </div>
+                        <div class="guitar_text_container">
+                            <span class="guitar_text">Guitar</span>
+                        </div>
+                    </div>
+                    <p class="english_text"><b>Let the story flow through the guitar strings</b></p>
                 </div>
-              </div>
-            </div>
-            <div class="w3-card-4 w3-margin w3-white">
 
-              <div class="w3-container">
-              
-<!--<amp-ad width="100vw" height="320"-->
-<!--     type="adsense"-->
-<!--     data-ad-client="ca-pub-5610815016922898"-->
-<!--     data-ad-slot="8538721994"-->
-<!--     data-auto-format="rspv"-->
-<!--     data-full-width="">-->
-<!--  <div overflow=""></div>-->
-<!--</amp-ad>-->
-              </div>
             </div>
-        <?php
-          }
+        </div>
 
-          echo $pages->page_links();
-        } catch (PDOException $e) {
-          echo $e->getMessage();
+        <!-- The Band Section -->
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+            <h2 class="w3-wide w3-text-red">Crazy Guitars</h2>
+            <p class="w3-opacity w3-text-black"><i>We love music</i></p>
+            <p class="w3-justify w3-text-black descText">'Crazy Guitars' was formed sometime in early 2021 by four of us, musically inclined people, Bulbul Das, Jayanta Gogoi, Rana Buragohain and Chandana Pathak. We would like to share with all, our experimentations with different genres and styles and singers who will voice the stories we want to tell. We keep our music organic, real and pure. Join us in our journey and celebrate with us the magical world of good music.
+                Peace and Love.</p>
+            <div class="w3-container w3-content">
+                <h2 class="w3-wide w3-center">OUR TEAM MEMBERS</h2>
+                <!-- <p class="w3-opacity w3-center"><i>Our new release!</i></p><br> -->
+                <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+                    <!-- Member list -->
+                    <?php
+                    try {
+                        $stmt = $db->query('SELECT memberID , name , designation , email , disply_pic FROM crazyguitar_members ORDER BY memberID DESC ');
+                        while ($row = $stmt->fetch()) {
+                    ?>
+                            <div class="w3-third w3-padding">
+                                <div class="our-member w3-card" role="button" id="view_details">
+
+                                    <div class="picture">
+
+                                        <?php if ($row['disply_pic'] != '') { ?>
+                                            <img src="./uploads/<?php echo ($row["disply_pic"]) ?>" class="img-fluid" alt="Random Name">
+                                        <?php } else { ?>
+                                            <img src="https://loremflickr.com/320/320/guitar" class="img-fluid" alt="Random Name">
+                                        <?php } ?>
+                                    </div>
+
+                                    <div class=" member-content">
+                                        <h3 class="name">
+                                            <?php echo ($row["name"]) ?>
+                                        </h3>
+                                        <h3 class="name">
+                                            <?php echo ($row["designation"]) ?>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            </button>
+                    <?php
+                        }
+                    } catch (PDOException $e) {
+                        echo $e->getMessage();
+                    }
+                    ?>
+                    <!-- member list end -->
+                </div>
+            </div>
+
+        </div>
+        <!-- The Tour Section -->
+        <div class="w3-black" id="song">
+            <div class="w3-container w3-content w3-padding-40" style="max-width:800px">
+                <h2 class="w3-wide w3-center">LATEST ALBUM</h2>
+                <p class="w3-opacity w3-center"><i>Our new release!</i></p><br>
+                <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+                    <!-- new release album -->
+                    <?php
+                    try {
+                        $stmt = $db->query('SELECT postID , postSlug ,  postTitle , postThumb , releaseDate FROM crazyguitar_posts_seo ORDER BY postID DESC LIMIT 3');
+                        while ($row = $stmt->fetch()) {
+                    ?>
+                            <div class="w3-third w3-card w3-margin-bottom">
+                                <?php if ($row['postThumb'] != '') { ?>
+                                    <img src="./uploads/<?php echo ($row["postThumb"]) ?>" class="img-fluid" alt="Random Name">
+                                <?php } else { ?>
+                                    <img src="https://loremflickr.com/320/240/guitars" alt="New York" style="width:100%" class="w3-hover-opacity">
+                                <?php } ?>
+                                <div class="w3-container w3-white">
+                                    <p><b><?php echo ($row["postTitle"]) ?></b></p>
+                                    <p class="w3-opacity">Release date -<?php echo ($row["releaseDate"]) ?></p>
+                                    <!-- <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p> -->
+
+                                    <a class="w3-button w3-black w3-margin-bottom" href="<?php echo ($row['postSlug']) ?>">View More</a>
+                                </div>
+                            </div>
+                    <?php
+                        }
+                    } catch (PDOException $e) {
+                        echo $e->getMessage();
+                    }
+                    ?>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- The Contact Section -->
+        <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+            <h2 class="w3-wide w3-center">CONTACT</h2>
+            <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+            <div class="w3-row w3-padding-32">
+                <div class="w3-col m6 w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker" style="width:30px"></i>Location<br>
+                    <i class="fa fa-phone" style="width:30px"></i> Phone: ------<br>
+                    <i class="fa fa-envelope" style="width:30px"> </i> Email: email<br>
+                </div>
+                <div class="w3-col m6">
+                    <form action="/action_page.php" target="_blank">
+                        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                            <div class="w3-half">
+                                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                            </div>
+                            <div class="w3-half">
+                                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                            </div>
+                        </div>
+                        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                        <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End Page Content -->
+    </div>
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <!-- <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
+    </footer>
+    <script>
+        // When the user clicks anywhere outside of the modal, close it
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
-        ?>
-
-
-      </div>
-
-      <?php $sidebar = 'author';
-      require('sidebar.php'); ?>
-    </div><br>
-  </div>
-  <div class="w3-container w3-dark-grey w3-padding-32 w3-margin-top w3-center">
-    <!-- footer -->
-<!--<amp-ad width="100vw" height="320"-->
-<!--     type="adsense"-->
-<!--     data-ad-client="ca-pub-5610815016922898"-->
-<!--     data-ad-slot="7401540771"-->
-<!--     data-auto-format="rspv"-->
-<!--     data-full-width="">-->
-<!--  <div overflow=""></div>-->
-<!--</amp-ad>-->
-  </div>
-  <?php
-  require('footer.php'); ?>
-<script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+        var image = document.getElementsByClassName('thumbnail');
+        new simpleParallax(image, {
+            delay: .6,
+            transition: 'cubic-bezier(0,0,0,1)'
+        });
+    </script>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 <?php require('includes/config.php'); ?>
 <!DOCTYPE html>
 <html>
-<title>Coder Rat</title>
+<title>Crazy Guitars</title>
 <meta charset="UTF-8">
 <link rel="icon" href="./images/icon.ico" type="image/icon type">
 <link rel="stylesheet" href="style/urls.css">
@@ -150,7 +150,7 @@
         <div class="w3-col m12">
             <div class="w3-margin" id="form">
                 <!-- <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button> -->
-                <div class=" w3-card-4 w3-amber w3-container w3-col m11 l4">
+                <div class=" w3-card-4 w3-red w3-container w3-col m11 l4">
                     <form id="contact-form">
                         <h2 class="w3-center">Contact Us</h2>
                         <div id="success_message">

@@ -17,7 +17,7 @@ class User extends Password
 	private function get_user_hash($username)
 	{
 		try {
-			$stmt = $this->_db->prepare('SELECT MemberID, username, password FROM blog_members WHERE username = :username');
+			$stmt = $this->_db->prepare('SELECT MemberID, username, password FROM crazyguitar_users WHERE username = :username');
 			$stmt->execute(array('username' => $username));
 			return $stmt->fetch();
 		} catch (PDOException $e) {
@@ -27,7 +27,7 @@ class User extends Password
 	public function login($username, $password)
 	{
 		$user = $this->get_user_hash($username);
-		if ($this->password_verify($password, $user['password']) == 1) {
+		if ($this->password_verify($password, $user['password']) != false) {
 			$_SESSION['loggedin'] = true;
 			$_SESSION['memberID'] = $user['memberID'];
 			$_SESSION['username'] = $user['username'];
